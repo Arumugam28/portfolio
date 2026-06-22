@@ -1,0 +1,10 @@
+/* Emptying default App.css as we will use component-level CSS modules or specific CSS files */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
