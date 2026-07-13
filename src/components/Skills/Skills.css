@@ -7,6 +7,12 @@
 .skill-category-card {
   padding: 2rem;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-category-card.full-width {
+  grid-column: 1 / -1;
 }
 
 .skill-category-card:hover {
@@ -55,4 +61,45 @@
   background: var(--accent-gradient);
   color: #fff;
   border-color: transparent;
+}
+
+/* Detailed Skills (e.g. DevOps) */
+.detailed-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.detailed-skill-item {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 3px solid var(--accent-primary);
+  transition: background var(--transition-fast);
+}
+
+.detailed-skill-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.detailed-skill-name {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.detailed-skill-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .skill-category-card.full-width {
+    grid-column: auto;
+  }
 }
