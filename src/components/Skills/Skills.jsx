@@ -21,15 +21,7 @@ const Skills = () => {
     {
       title: 'DevOps & Infrastructure',
       icon: <FiCloud />,
-      fullWidth: true,
-      detailedSkills: [
-        { name: 'Containerisation', desc: 'Packaging scalable applications securely into portable units using Docker.' },
-        { name: 'Orchestration', desc: 'Managing multi-container production deployments seamlessly via Kubernetes.' },
-        { name: 'CI/CD Pipelines', desc: 'Automated building, testing, and deploying using GitHub Actions or GitLab.' },
-        { name: 'Infrastructure as Code', desc: 'Scripting infrastructure setups reproducibly with Terraform or Ansible.' },
-        { name: 'Cloud Platforms', desc: 'Cloud architecture deployment hosting on AWS, Google Cloud, or Azure.' },
-        { name: 'Monitoring & Logging', desc: 'Real-time system health and error tracking using Prometheus or ELK.' }
-      ]
+      skills: ['Containerisation', 'Orchestration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Cloud Platforms', 'Monitoring & Logging']
     }
   ];
 
@@ -42,30 +34,16 @@ const Skills = () => {
         
         <div className="skills-category-grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className={`skill-category-card glass-panel ${category.fullWidth ? 'full-width' : ''}`}>
+            <div key={index} className="skill-category-card glass-panel">
               <div className="category-header">
                 <div className="category-icon">{category.icon}</div>
                 <h3 className="category-title">{category.title}</h3>
               </div>
-              
-              {category.skills && (
-                <div className="category-skills">
-                  {category.skills.map((skill, i) => (
-                    <span key={i} className="skill-tag">{skill}</span>
-                  ))}
-                </div>
-              )}
-
-              {category.detailedSkills && (
-                <div className="detailed-skills-grid">
-                  {category.detailedSkills.map((item, i) => (
-                    <div key={i} className="detailed-skill-item">
-                      <strong className="detailed-skill-name">{item.name}</strong>
-                      <span className="detailed-skill-desc">{item.desc}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
+              <div className="category-skills">
+                {category.skills.map((skill, i) => (
+                  <span key={i} className="skill-tag">{skill}</span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
