@@ -8,21 +8,21 @@ const Projects = () => {
       title: 'Co-Curricular Activities Management System',
       description: 'A scalable enterprise-grade application built to streamline academic event management, student registrations, and workflow scheduling.',
       tags: ['Java', 'Spring Boot', 'React.js', 'MySQL', 'Jest', 'REST APIs'],
-      githubLink: '#'
+      githubLink: 'https://github.com/Arumugam28'
     },
     {
       id: 2,
       title: 'Full-Stack E-Learning Platform',
       description: 'An interactive, end-to-end educational portal featuring course management, real-time student progress tracking, and seamless content delivery.',
       tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT', 'Tailwind CSS'],
-      githubLink: '#'
+      githubLink: 'https://github.com/Arumugam28'
     },
     {
       id: 3,
       title: '3D Model Viewer & Cloud Storage Platform',
       description: 'A high-performance cloud-integrated application allowing users to seamlessly upload, store, and interact with complex 3D assets in real-time.',
       tags: ['React.js', 'Three.js / WebGL', 'Node.js', 'Express.js', 'AWS S3', 'Jest'],
-      githubLink: '#'
+      githubLink: 'https://github.com/Arumugam28'
     }
   ];
 
