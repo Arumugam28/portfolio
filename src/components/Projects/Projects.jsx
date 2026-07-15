@@ -15,14 +15,14 @@ const Projects = () => {
       title: 'Full-Stack E-Learning Platform',
       description: 'An interactive, end-to-end educational portal featuring course management, real-time student progress tracking, and seamless content delivery.',
       tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT', 'Tailwind CSS'],
-      githubLink: 'https://github.com/Arumugam28'
+      githubLink: 'https://github.com/Arumugam28/E-Learner'
     },
     {
       id: 3,
       title: '3D Model Viewer & Cloud Storage Platform',
       description: 'A high-performance cloud-integrated application allowing users to seamlessly upload, store, and interact with complex 3D assets in real-time.',
       tags: ['React.js', 'Three.js / WebGL', 'Node.js', 'Express.js', 'AWS S3', 'Jest'],
-      githubLink: 'https://github.com/Arumugam28'
+      githubLink: 'https://github.com/Arumugam28/3d_viewer'
     }
   ];
 
