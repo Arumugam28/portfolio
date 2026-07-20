@@ -1,4 +1,4 @@
-import { FiGithub } from 'react-icons/fi';
+import { FiGithub, FiExternalLink } from 'react-icons/fi';
 import './Projects.css';
 
 const Projects = () => {
@@ -8,7 +8,8 @@ const Projects = () => {
       title: 'Co-Curricular Activities Management System',
       description: 'A scalable enterprise-grade application built to streamline academic event management, student registrations, and workflow scheduling.',
       tags: ['Java', 'Spring Boot', 'React.js', 'MySQL', 'Jest', 'REST APIs'],
-      githubLink: 'https://github.com/Arumugam28'
+      githubLink: 'https://github.com/Arumugam28/RIT-EVENT-PORTAL',
+      liveLink: 'https://rit-event-portal.vercel.app'
     },
     {
       id: 2,
@@ -48,9 +49,15 @@ const Projects = () => {
               
               <div className="project-overlay">
                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-link" aria-label="View Source">
-                  <FiGithub size={24} />
+                  <FiGithub size={20} />
                   <span>View Repository</span>
                 </a>
+                {project.liveLink && (
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="project-link live-link" aria-label="View Live">
+                    <FiExternalLink size={20} />
+                    <span>Live Demo</span>
+                  </a>
+                )}
               </div>
             </div>
           ))}
