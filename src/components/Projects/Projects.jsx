@@ -5,24 +5,24 @@ const Projects = () => {
   const projectList = [
     {
       id: 1,
+      title: 'Enterprise Job Board Platform',
+      description: 'Architected a scalable job portal using Laravel and MySQL. Implemented complex Eloquent ORM relationships for employer-applicant data and developed a robust RESTful API with secure authentication via Laravel Sanctum. Optimized database indexing, reducing search query latency by 35%.',
+      tags: ['PHP', 'Laravel', 'MySQL', 'REST API', 'Eloquent', 'Sanctum'],
+      githubLink: 'https://github.com/Arumugam28/php_Job-board'
+    },
+    {
+      id: 2,
       title: 'Co-Curricular Activities Management System',
-      description: 'A scalable enterprise-grade application built to streamline academic event management, student registrations, and workflow scheduling.',
-      tags: ['Java', 'Spring Boot', 'React.js', 'MySQL', 'Jest', 'REST APIs'],
+      description: 'Engineered an enterprise event management backend using Java and Spring Boot. Designed secure JWT-based role authorization (Student/Admin) and optimized the MySQL schema to handle 1000+ concurrent student registrations efficiently, improving transaction throughput.',
+      tags: ['Java', 'Spring Boot', 'React.js', 'MySQL', 'Jest', 'JWT'],
       githubLink: 'https://github.com/Arumugam28/RIT-EVENT-PORTAL',
       liveLink: 'https://rit-event-portal.vercel.app'
     },
     {
-      id: 2,
-      title: 'Full-Stack E-Learning Platform',
-      description: 'An interactive, end-to-end educational portal featuring course management, real-time student progress tracking, and seamless content delivery.',
-      tags: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JWT', 'Tailwind CSS'],
-      githubLink: 'https://github.com/Arumugam28/E-Learner'
-    },
-    {
       id: 3,
-      title: '3D Model Viewer & Cloud Storage Platform',
-      description: 'A high-performance cloud-integrated application allowing users to seamlessly upload, store, and interact with complex 3D assets in real-time.',
-      tags: ['React.js', 'Three.js / WebGL', 'Node.js', 'Express.js', 'AWS S3', 'Jest'],
+      title: 'Cloud-Integrated 3D Asset Manager',
+      description: 'Developed a high-throughput backend service using Node.js and Express to orchestrate cloud storage operations. Integrated AWS S3 for scalable asset storage and implemented robust API endpoints to serve large 3D models (WebGL) to the client with minimal latency.',
+      tags: ['Node.js', 'Express.js', 'AWS S3', 'React.js', 'Three.js'],
       githubLink: 'https://github.com/Arumugam28/3d_viewer'
     }
   ];

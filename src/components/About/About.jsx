@@ -11,21 +11,32 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="about-intro">
-              I am a Full-Stack Engineer with a strong foundation in backend architecture and modern frontend frameworks. I specialize in bridging the gap between high-performance data systems and seamless user interfaces.
+              I'm a Software Developer focused on building scalable backend systems, REST APIs, database-driven applications, and modern web solutions. My primary development experience revolves around Java, Spring Boot, PHP, and Laravel, with a strong focus on clean architecture, API development, database design, validation, security, and maintainable code.
             </p>
             
             <h3 className="about-subtitle">What I bring to the table:</h3>
             <ul className="about-list">
               <li>
-                <strong>Enterprise Reliability:</strong> Deep understanding of Java, Spring Boot, and Microservices for secure, multi-tier applications.
+                <strong>Backend Engineering:</strong> Building robust and scalable backend services with Java, Spring Boot, PHP, and Laravel.
               </li>
               <li>
-                <strong>Modern Web Agility:</strong> Full-stack JavaScript proficiency using the MERN stack to build fast, responsive, and SEO-friendly single-page applications.
+                <strong>API Development:</strong> Designing and integrating RESTful APIs with a focus on security, validation, and clean architecture.
               </li>
               <li>
-                <strong>Architectural Balance:</strong> The ability to choose the exact right tool for the job, whether a project needs a relational SQL structure or a flexible NoSQL database.
+                <strong>Database Systems:</strong> Modeling and managing complex data with MySQL and PostgreSQL for performance and reliability.
               </li>
             </ul>
+
+            <div className="about-stats">
+              <h3 className="about-subtitle stats-title">GitHub Activity</h3>
+              <a href="https://github.com/Arumugam28" target="_blank" rel="noopener noreferrer" className="streak-link">
+                <img 
+                  src="https://streak-stats.demolab.com/?user=Arumugam28&theme=github-dark-blue&hide_border=true" 
+                  alt="Arumugam28 GitHub Streak" 
+                  className="streak-img"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

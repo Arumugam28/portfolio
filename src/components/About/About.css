@@ -60,3 +60,29 @@
 .about-list strong {
   color: var(--text-primary);
 }
+
+.about-stats {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.stats-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.streak-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.streak-link:hover {
+  transform: translateY(-5px);
+}
+
+.streak-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+}

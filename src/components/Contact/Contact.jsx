@@ -17,18 +17,40 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Create mailto link for a working frontend-only form solution
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    
-    // Open default mail client with pre-filled details
-    window.location.href = `mailto:arumugajai447@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Reset form after submission attempt
-    setFormData({ name: '', email: '', message: '' });
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/arumugajai447@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `New Portfolio Message from ${formData.name}`
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -105,7 +127,20 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-primary submit-btn">Send Message</button>
+              <button type="submit" className="btn btn-primary submit-btn" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </button>
+              
+              {submitStatus === 'success' && (
+                <div className="form-status success-message" style={{ marginTop: '1rem', color: '#4ade80' }}>
+                  Thanks for reaching out! I'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="form-status error-message" style={{ marginTop: '1rem', color: '#f87171' }}>
+                  Oops! Something went wrong. Please try emailing me directly.
+                </div>
+              )}
             </form>
           </div>
         </div>

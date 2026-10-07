@@ -4,24 +4,24 @@ import './Skills.css';
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Backend & Architecture',
+      title: 'Backend Development',
       icon: <FiServer />,
-      skills: ['Java', 'Spring Boot', 'Node.js', 'Express', 'RESTful APIs', 'Microservices']
+      skills: ['Java', 'Spring Boot', 'PHP', 'Laravel', 'Node.js', 'Express.js']
     },
     {
       title: 'Frontend Development',
       icon: <FiLayout />,
-      skills: ['React', 'JavaScript (ES6+)', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap']
+      skills: ['JavaScript', 'React', 'HTML', 'CSS']
     },
     {
-      title: 'Databases & Tools',
+      title: 'Databases',
       icon: <FiDatabase />,
-      skills: ['MongoDB', 'MySQL', 'PostgreSQL', 'Git', 'Postman', 'Docker']
+      skills: ['MySQL', 'PostgreSQL', 'MongoDB']
     },
     {
-      title: 'DevOps & Infrastructure',
+      title: 'DevOps & Tools',
       icon: <FiCloud />,
-      skills: ['Containerisation', 'Orchestration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Cloud Platforms', 'Monitoring & Logging']
+      skills: ['Docker', 'Git', 'GitHub', 'AWS', 'Postman']
     }
   ];
 

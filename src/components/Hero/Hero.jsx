@@ -13,15 +13,18 @@ const Hero = () => {
         <h1 className="hero-title">
           <span className="text-gradient">Arumugam B</span>
         </h1>
-        <h3 className="hero-subtitle">Full-Stack Software Engineer</h3>
+        <h3 className="hero-subtitle">Software Developer | Java • Spring Boot • PHP • Laravel</h3>
         
         <p className="hero-description">
-          Whether it's crafting secure, high-throughput enterprise systems with Java, Spring Boot, and SQL, or building highly responsive, real-time web applications with MongoDB, Express, React, and Node.js, I engineer end-to-end solutions that scale.
+          Building scalable backend systems, reliable APIs, and production-ready web applications.
         </p>
         
         <div className="hero-cta-group">
           <a href="#projects" className="btn btn-primary">
             View My Work <FiArrowRight className="btn-icon" />
+          </a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+            Download Resume
           </a>
           <a href="#contact" className="btn btn-secondary">
             Contact Me
