@@ -15,8 +15,18 @@
 }
 
 .about-content {
-  max-width: 800px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  .about-content {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 4rem;
+  }
 }
 
 .about-intro {
@@ -62,27 +72,54 @@
 }
 
 .about-stats {
-  margin-top: 3rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  background: var(--bg-glass, rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-radius: var(--border-radius, 12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.about-stats:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-primary, #8a2be2);
+  box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+}
+
+.stats-header {
+  margin-bottom: 1.5rem;
 }
 
 .stats-title {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.stats-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
 }
 
 .streak-link {
   display: inline-block;
   transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .streak-link:hover {
-  transform: translateY(-5px);
+  transform: scale(1.02);
 }
 
 .streak-img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
 }
+
+
+

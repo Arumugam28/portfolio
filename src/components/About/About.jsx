@@ -26,17 +26,20 @@ const About = () => {
                 <strong>Database Systems:</strong> Modeling and managing complex data with MySQL and PostgreSQL for performance and reliability.
               </li>
             </ul>
+          </div>
 
-            <div className="about-stats">
+          <div className="about-stats glass-panel">
+            <div className="stats-header">
               <h3 className="about-subtitle stats-title">GitHub Activity</h3>
-              <a href="https://github.com/Arumugam28" target="_blank" rel="noopener noreferrer" className="streak-link">
-                <img 
-                  src="https://streak-stats.demolab.com/?user=Arumugam28&theme=github-dark-blue&hide_border=true" 
-                  alt="Arumugam28 GitHub Streak" 
-                  className="streak-img"
-                />
-              </a>
+              <p className="stats-desc">Consistent contributions to open source and private repositories.</p>
             </div>
+            <a href="https://github.com/Arumugam28" target="_blank" rel="noopener noreferrer" className="streak-link">
+              <img 
+                src="https://streak-stats.demolab.com/?user=Arumugam28&theme=github-dark-blue&hide_border=true&background=transparent" 
+                alt="Arumugam28 GitHub Streak" 
+                className="streak-img"
+              />
+            </a>
           </div>
         </div>
       </div>
