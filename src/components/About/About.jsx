@@ -35,7 +35,7 @@ const About = () => {
             </div>
             <a href="https://github.com/Arumugam28" target="_blank" rel="noopener noreferrer" className="streak-link">
               <img 
-                src="https://streak-stats.demolab.com/?user=Arumugam28&theme=github-dark-blue&hide_border=true&background=transparent" 
+                src="https://streak-stats.demolab.com/?user=Arumugam28&theme=default&hide_border=true&background=transparent" 
                 alt="Arumugam28 GitHub Streak" 
                 className="streak-img"
               />

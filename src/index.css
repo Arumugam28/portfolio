@@ -1,23 +1,33 @@
 :root {
-  --font-primary: 'Outfit', 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-primary: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   
-  /* Premium Dark Theme Palette */
-  --bg-primary: #0a0a0f;
-  --bg-secondary: #13131f;
-  --bg-glass: rgba(19, 19, 31, 0.7);
+  /* Clean Modern Swiss Tech Light Theme Palette */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-glass: rgba(255, 255, 255, 0.85);
   
-  --text-primary: #f0f0f5;
-  --text-secondary: #a0a0b5;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
   
-  --accent-primary: #8a2be2; /* Vibrant Purple */
-  --accent-secondary: #4169e1; /* Royal Blue */
-  --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  --accent-primary: #2563eb;       /* Modern Cobalt / Indigo */
+  --accent-hover: #1d4ed8;
+  --accent-secondary: #0284c7;     /* Sky 600 */
+  --accent-light: #eff6ff;
+  --accent-gradient: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #0284c7 100%);
   
-  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color: #e2e8f0;
+  --border-strong: #cbd5e1;
   --border-radius: 12px;
   
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s ease;
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 14px 28px -4px rgba(37, 99, 235, 0.12), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+  
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -33,6 +43,8 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -52,13 +64,14 @@ button {
   outline: none;
 }
 
-/* Glassmorphism Utility */
+/* Glassmorphism / Crisp Surface Panel Utility */
 .glass-panel {
-  background: var(--bg-glass);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--bg-secondary);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Gradient Text Utility */
@@ -80,10 +93,10 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-secondary);
+  background: var(--border-strong);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-primary);
+  background: var(--text-muted);
 }
